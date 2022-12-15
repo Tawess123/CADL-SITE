@@ -1,0 +1,16 @@
+{% load static %}
+
+{% block content %}
+    <div class="center">
+    <h1>Présence</h1>
+    <link rel="stylesheet" href="{% static 'presence/style.css' %}">
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <input id="cardnumber" type="text" autofocus name="cardnumber">
+        </p>
+        <button type="submit">Présent!</button>
+    </form>
+
+
+{% endblock %}
